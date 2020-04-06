@@ -1,20 +1,11 @@
 h1
 {
-    color: green;
-    font-size: 40px;
+    color: tomato;
+    background-color: darkmagenta;
 }
 
 h2
 {
-    color: brown;
-}
-
-#characters
-{
-    color: purple;
-}
-
-.red
-{
-    color:red;
+    color: #00ffe2;
+    background-color: #000000;
 }
