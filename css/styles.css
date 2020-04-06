@@ -1,5 +1,8 @@
 h1
 {
+    position: sticky;
+    top:10px;
+    left:100px;
     color: tomato;
     background-color: darkmagenta;
     padding: 10px;
@@ -9,8 +12,28 @@ h1
 
 h2
 {
+    position: relative;
+    top: 10px;
+    left: 10px;
     color: #00ffe2;
     background-color: #000000;
     padding: 10px;
     border: 5px solid red;
+}
+.relative
+{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid red;
+}
+
+.absolute
+{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    width: 200px;
+    height: 100px;
+    border: 2px solid magenta;
 }
