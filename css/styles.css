@@ -2,10 +2,15 @@ h1
 {
     color: tomato;
     background-color: darkmagenta;
+    padding: 10px;
+    border:5px solid green;
+    margin:50px;
 }
 
 h2
 {
     color: #00ffe2;
     background-color: #000000;
+    padding: 10px;
+    border: 5px solid red;
 }
