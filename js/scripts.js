@@ -1,3 +1,4 @@
 $("p").click(function() {
-    $(this).hide();
+    $(this).css({"color":"red","font-size":"40px"})
 })
+
