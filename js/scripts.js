@@ -1,5 +1,7 @@
-$("p").click(function() {
-    $(this).css("color","green").fadeOut().fadeIn();
-    
+$("#add").click(function(){
+    $("p").addClass("blue");
 })
 
+$("#remove").click(function(){
+    $("p").removeClass("blue");
+})
