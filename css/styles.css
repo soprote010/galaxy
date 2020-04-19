@@ -151,3 +151,13 @@ Preloader
     height: 100%;
     width: auto;
 }
+
+/* 
+Hero Navigation Bar
+*/
+.navbar{
+    font-size: 13px;
+    font-weight: 600;
+    margin: 15px 50px 0px 50px;
+    text-transform: uppercase;
+}
