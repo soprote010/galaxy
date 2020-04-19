@@ -9,7 +9,16 @@ Version: 1.0
 Body Form: 'Popins', sans-serif,16px]
 */
 
-
+/* 
+General Styles
+*/
+html.
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: grey;
+}
 /* 
 Preloader
 */
@@ -22,4 +31,23 @@ Preloader
     left: 0px;
     top: 0px;
     z-index: 100;
+}
+
+#hero .hero_outer-wrapper{
+    position: absolute;
+    height: 100%;
+    display: table;
+}
+
+#hero .hero_inner-wrapper{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#hero h1{
+    font-size: 60px;
+    font-weight: 600;
+    margin: 16px 0px 70px 0px;
+    line-height: 80px;
+    color: white;
 }
