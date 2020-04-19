@@ -3,6 +3,12 @@ $(document).ready(function(){
         $(".pre_loader").css("display","none");
     });
     
+    $(".hero_title").each(function(i){
+        var $current_element=$(this);
+        setTimeout(function(){
+            $current_element.addClass("reveal");
+        },i*100)
+    });
     $("#rotating-text").Morphext({
         // The [in] animation type. Refer to Animate.css for a list of available animations.
         animation: "bounceIn",
