@@ -1,164 +1,326 @@
-/* 
-[Master StyleSheet
-Website: Galaxy - Modern and Responsive Portfolio Template
-Author: Francisco Minajas
-Website: https://
-Default Color: White
-Text Color: White
-Version: 1.0
-Body Form: 'Popins', sans-serif,16px]
-*/
+/*------------------------------------------------------------------
+                 [Master Stylesheet]
 
-/* 
-General Styles
-*/
-html
-body{
-    padding: 0;
+Website      :	Galaxy - Modern and Responsive Portfolio Template
+Author       :  Aysel Omer
+WebSite      :  https://thecodinggirls.com/galaxy
+Default Color:  #000;
+Text Color   :  #363636;
+Version      :  1.0
+Body Font    :  'Poppins', sans-serif; 16px;
+Headers	     :  'Poppins', sans-serif;
+
+-------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------
+            General Styles
+-------------------------------------------*/
+
+html,
+body {
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: grey;
-    height: 100;
+    height: 100%;
 }
-/* 
-Preloader
-*/
 
-.pre_loader{
-    position: fixed; 
+/*-------------------------------------------
+            Pre Loader
+-------------------------------------------*/
+
+.pre_loader {
+    position: fixed;
+    background-color: #000;
     width: 100%;
-    height: 100%;
-    background-color: black;
-    left: 0px;
-    top: 0px;
+    height: 100%; 
+    left: 0;
+    top: 0;
     z-index: 100;
+    /*transition: 3s ease;  */ 
 }
 
-#hero{
-    position: relative;
+
+/*-------------------------------------------
+            Hero
+-------------------------------------------*/
+#hero {
+    position:relative;
     height: 100%;
 }
-#hero .hero_outer-wrapper{
-    position: absolute;
-    height: 100%;
+
+#hero .hero_outer-wrapper {
+    position:absolute;
     display: table;
+    height:100%;
 }
 
-#hero .hero_inner-wrapper{
+#hero .hero_inner-wrapper {
     display: table-cell;
     vertical-align: middle;
 }
 
-#hero h1{
+
+#hero h1 {
     font-size: 60px;
     font-weight: 600;
-    margin: 16px 0px 70px 0px;
+    margin:16px 0px 70px 0px;
     line-height: 80px;
-    color: white;
-}
-.hero_title{
-    position: relative;
-    color: rgba(255,255,255,0);
+    color:white;
 }
 
-.hero_title.reveal{
+.hero_title {
+    position: relative;
+    color: rgba(255, 255, 255, 0);
+}
+
+.hero_title.reveal {
     color: white;
     transition-delay: .8s;
 }
 
-#hero h1 a.reveal{
-    color: yellow;
+#hero h1 a.reveal {
+    color:yellow;
 }
 
-.hero_title:before{
+.hero_title:before {
     background-color: white;
     height: 100%;
     position: absolute;
     content: "";
 }
 
-@keyframes animation-h1-bg-reveal-cover{
-    0%{
+
+@keyframes animation-h1-bg-reveal-cover {
+    0% {
         left: 0;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+    
+}
+
+.hero_title.reveal:before {
+   animation: animation-h1-bg-reveal-cover .5s ease-out .3s forwards, animation-h1-bg-reveal-uncover 1s ease-out 1.4s forwards;
+}
+
+
+@keyframes animation-h1-bg-reveal-uncover {
+    0% {
+        width: 100%;
+    }
+    100% {      
         width: 0;
     }
     
-    100{
-        left: 0;
-        width: 100;
-    }
+    
 }
 
-.hero_title.reveal:before{
-    animation: animation-h1-bg-reveal-cover .5s ease-out .3s forwards, animation-h1-bg-reveal-uncover 1s ease-out 1.4s forwards;
+#hero h1 a:before {
+    background-color:yellow;
 }
 
-@keyframes animation-h1-bg-reveal-uncover{
-    0%{
-        width: 100%;
-    }
-    100%{
-        width: 0;
-    }
-}
 
-#hero h1 a:before{
-    background-color: yellow;
-}
-
-.hero_link{
-    color:white;
-    font-size: 24pz;
-    font-size: bold;
+.hero_link {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
     position: relative;
     transition: .5s ease;
-    opacity: 1;
+    opacity:1;
 }
 
-.hero_link figure{
+#hero .hero_link figure {
     position: relative;
-    color: white;
-    background-color: rgba(255,255,255,.3);
-    font-size: 20px;
     width: 50px;
     height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(255, 255, 255, .3);
     padding: 20px;
     border-radius: 100%;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 15px;  
+
 }
 
-.hero_link figure i{
-    font-size: 30px;
-    font-weight: 900;
-    position:relative;
-    margin-left: -3px;
+   #hero .hero_link figure i {
+    font-size:30px;
+    font-weight:900;
+    position :relative;
+    margin-left:-3px;       
 }
 
-.hero_link:hover{
+#hero .hero_link:hover {
     color: yellow;
     text-decoration: none;
 }
 
-#slider{
+
+
+/*-------------------------------------------
+        Hero Slider Background
+-------------------------------------------*/
+
+#slider {
     position: absolute;
     z-index: -2;
-    height: 100%;
     width: 100%;
-    filter: brightness(.6);
-}
-
-#slider img{
     height: 100%;
-    width: auto;
+    overflow: hidden;
+    filter:brightness(.6);
+
 }
 
-/* 
-Hero Navigation Bar
-*/
-.navbar{
-    font-size: 13px;
+#slider img {
+    height:100%;
+    width:auto;
+}
+
+ 
+/*-------------------------------------------
+        Hero Navigation Bar
+-------------------------------------------*/
+.navbar {
+    font-size:13px;
     font-weight: 600;
-    margin: 15px 50px 0px 50px;
+    margin:15px 50px 0px 50px;
     text-transform: uppercase;
 }
+
+
+/*-------------------------------------------
+                What We Do
+-------------------------------------------*/
+.section_wrapper {
+    padding-top:80px;
+}
+
+.section_title h2 {
+    padding-top:10px;
+    margin-bottom: 100px;
+    font-size:36px;
+    font-weight:600;
+}
+
+.box_header {
+    padding:5px 0px;
+}
+
+.box_image {
+    margin-bottom: 30px;
+}
+
+
+.box_header h4 {
+    font-size:20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 18px;
+
+}
+
+.box_content p {
+    font-size:15px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 16px;
+    padding:5px 0;
+    opacity:.65;
+}
+
+
+.text_reveal {
+    position: relative;
+    display: inline-block;
+}
+
+.text_reveal:before {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    transition: .6s ease;
+    transition-delay: .1s;
+}
+
+
+.text_reveal.in {}
+
+.text_reveal.in:before {
+    width: 0;
+}
+
+
+
+/*-------------------------------------------
+        Portfolio
+-------------------------------------------*/
+
+
+.gallery {
+    position: relative;
+}
+
+.gallery_caption {
+     position: absolute;
+    color:white; 
+    left:0;
+bottom:0;
+        padding: 130px 65px;
+        z-index: 2;
+
+
+}
+
+.gallery h5 {
+    font-size: 18px;
+        font-weight: 700;
+    line-height:25px;
+    opacity: .8;
+}
+.gallery h3 {
+    font-size: 42px;
+    font-weight: 500;
+        line-height:50px;
+
+}
+
+.portfolio-image {
+    height:500px;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    display: block;
+    transition : .8s;
+    height:100%;
+}
+
+.gallery a:hover .portfolio-image img {
+    transform: scale(1.06);
+    filter:brightness(.6);
+}
+
+
+#btn-load-more {
+    margin-top:50px;
+    background-color:black;
+    padding:10px 20px;
+    border-color:black;
+    border-radius:0;
+}
+
+
+
+
+/*
+
+
